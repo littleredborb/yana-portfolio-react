@@ -1,25 +1,36 @@
-import logo from './logo.svg';
-import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Header from './components/header.js';
+import GalleryImage from './components/gallery-image';
+import './App.css';
+import Navigation from './components/navigation.js';
+import React from 'react';
+// function App() {
+//   //const name = 'Yana';
+//   // Place JS inside {}
+
+//   return (
+//     <div className="container">
+//       <Header/>
+//     </div>
+//   );
+// }
+
+class App extends React.Component {
+  render (){
+    return (
+      <div>
+        <div className="container">
+          <Header/>
+          <Navigation/>
+        </div>
+        <div className="gallery-container">
+          <GalleryImage/>
+        </div>
+          
+      </div>
+    )
+    
+  }
 }
 
 export default App;
