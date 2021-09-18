@@ -1,6 +1,5 @@
 import PropTypes from 'prop-types'
 import React from 'react'
-import { useState } from 'react'
 
 import defaultImg from '../img/default.png'
 
@@ -9,7 +8,7 @@ export const GalleryModal = ({src, onCloseModal, isVisible}) => {
 	return (
 		<div className={isVisible ? "modal-overlay-open" : "modal-overlay-closed" } onClick={() => onCloseModal()} >
 			<div className="modal">
-				<img src={src}></img>
+				<img src={src} alt="full artwork"></img>
 			</div>
 		</div>
 	)

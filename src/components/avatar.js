@@ -4,7 +4,7 @@ const Avatar = ({src}) => {
 
 	return (
 		<div className="avatar-cropped">
-			<img className="avatar" src={src}></img>
+			<img className="avatar" alt="avatar" src={src}></img>
 		</div>
 		
 	)

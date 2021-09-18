@@ -3,7 +3,7 @@ import defaultImg from '../img/default.png'
 
 export const Image = ({src, pos, onOpenModal}) => {
 	return (
-			<img className="image" onClick={() => onOpenModal(src)} src={src} style={{objectPosition: pos}}></img>
+			<img className="image" alt="artwork" onClick={() => onOpenModal(src)} src={src} style={{objectPosition: pos}}></img>
 	)
 }
 

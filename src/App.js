@@ -17,7 +17,7 @@ import img5 from './img/5.png'
 import img6 from './img/6.png'
 
 const App = () => {
-  const [images, setImages] = useState([{
+  const [images] = useState([{
 		"id": 0,
 		"src": img1,
 		"objectPosition": "50% 60%"
@@ -48,12 +48,35 @@ const App = () => {
 		"objectPosition": "20% 10%"
 		}
 	]);
+
+  const [links] = useState([
+    { "id": 0,
+      "name": "twitter",
+      "href": "https://twitter.com"
+    },
+    { "id": 1,
+      "name": "instagram",
+      "href": "https://instagram.com"
+    },
+    { "id": 2,
+      "name": "tumblr",
+      "href": "https://tumblr.com"
+    },
+    { "id": 3,
+      "name": "commissions",
+      "href": "#"
+    },
+    { "id": 4,
+      "name": "contact",
+      "href": "#"
+    }
+  ]);
   const [modal, setModal] = useState({
     "imageToShow": img1,
     "isVisible": false
     }
   );
-  const [header, setHeader] = useState({
+  const [header] = useState({
     "title": "Welcome!",
     "subtitle": "I'm Yana, an illustrator and a developer."
     }
@@ -76,7 +99,7 @@ const App = () => {
     <div>
       <div className="container">
         <Header avatarImg={avatarImg} title={header.title} subtitle={header.subtitle}/>
-        <Navigation/>
+        <Navigation links={links}/>
       </div>
       <div className="gallery-container">
         <Gallery images={images} onOpenModal={openModal}/>
