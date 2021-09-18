@@ -6,25 +6,24 @@ const Navigation = (props) => {
 			<ul className="navigation">
 				<li><a className="btn" href={"https://twitter.com/" + props.twitter}>twitter</a></li>
 				<li><a className="btn" href={"https://instagram.com/" + props.twitter}>instagram</a></li>
-				<li><a className="btn" href={"https://instagram.com/" + props.twitter}>linkA</a></li>
-				<li><a className="btn" href={"https://instagram.com/" + props.twitter}>linkB</a></li>
+				<li><a className="btn" href={"#"}>commissions</a></li>
+				<li><a className="btn" href={"#"}>contact</a></li>
 			</ul>
 		</div>
 	)
 }
 
 Navigation.defaultProps = {
-	email: "ynn40407@gmail.com",
-	twitter: "yanana404",
-	tumblr: "yanana-404",
-	instagram: "yanana404",
+	twitter: "#",
+	tumblr: "#",
+	instagram: "#",
 }
 
 Navigation.propTypes = {
-	email: PropTypes.string.isRequired,
-	twitter: PropTypes.string.isRequired,
-	tumblr: PropTypes.string.isRequired,
-	instagram: PropTypes.string.isRequired
+	email: PropTypes.string,
+	twitter: PropTypes.string,
+	tumblr: PropTypes.string,
+	instagram: PropTypes.string
 }
 
 export default Navigation

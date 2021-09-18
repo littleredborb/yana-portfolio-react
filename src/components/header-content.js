@@ -1,25 +1,23 @@
 import PropTypes from 'prop-types';
 
-const HeaderContent = (props) => {
-	// const infoLink = "#gallery";
-
+const HeaderContent = ({title, subtitle}) => {
 	return (
 		<div className="header-content">
-			<h1>{props.title}</h1>
-			<p>{props.subtitle}</p>
+			<h1>{title}</h1>
+			<p>{subtitle}</p>
 		</div>
 	)
 }
 
 HeaderContent.defaultProps = {
-	title: 'Welcome!',
-	subtitle: 'This is a necessary attempt to make a long sentence just to fill up this space for testing purposes.'
+	title: 'Henlo!',
+	subtitle: 'All your wanted text goes here'
 }
 
-// SSet data type for the properties
+// Set data type for the properties
 HeaderContent.propTypes = {
-	title: PropTypes.string.isRequired,
-	subtitle: PropTypes.string.isRequired
+	title: PropTypes.string,
+	subtitle: PropTypes.string
 }
 
 
